@@ -21,6 +21,6 @@ class UsersHandler:
 
     def edit_user_meta(self, user_id, delta):
         self.storage.edit_user(user_id, delta)
-    
+
     def get_user(self, user_id):
         self.storage.get_user(user_id)

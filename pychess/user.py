@@ -4,6 +4,7 @@ User class
 
 from users_handler import UsersHandler
 
+
 class User:
     user_id: int
     rating: int
