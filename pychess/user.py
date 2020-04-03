@@ -4,4 +4,4 @@ User class
 
 
 class User:
-    pass
+    id: str
