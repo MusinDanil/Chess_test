@@ -19,3 +19,15 @@ class Storage:
 
     def get_replay(self, replay_id: ReplayId) -> Replay:
         return self.replays[replay_id]
+
+    def add_user(self, user: User):
+        self.users.append(user)
+
+    def get_user(self, user_id):
+        return self.users[user_id]
+
+    def edit_user(self, user_id, delta): # todo annotated
+        return self.users[user_id]
+    
+    def delete_user(self, user_id):
+        pass
