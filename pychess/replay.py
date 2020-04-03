@@ -10,5 +10,7 @@ ReplayId = int
 
 
 class Replay:
-    def __init__(self, tickets: Tuple[Ticket, Ticket]):
+    def __init__(self, replay_id: ReplayId, tickets: Tuple[Ticket, Ticket]):
         self.moves: List[Move] = []
+        self.tickets = tickets
+        self.id = replay_id
