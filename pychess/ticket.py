@@ -2,8 +2,8 @@ from user import User
 
 
 class Wishes:
-    _wished_time: int
-    _wished_side: str
+    wished_time: int
+    wished_side: str
 
     def __init__(self, wished_time, wished_side):
         self._wished_time = wished_time
