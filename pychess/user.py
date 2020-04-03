@@ -6,7 +6,7 @@ from users_handler import UsersHandler
 
 
 class User:
-    id: int
+    id: str
     rating: int
     users_handler: UsersHandler
 
