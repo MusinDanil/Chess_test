@@ -1,12 +1,16 @@
-"""
-Ticket class
-"""
-
 from user import User
-from wishes import Wishes
+
+
+class Wishes:
+    _wished_time: int
+    _wished_side: str
+
+    def __init__(self, wished_time, wished_side):
+        self._wished_time = wished_time
+        self._wished_side = wished_side
 
 
 class Ticket:
-    def __init__(self, user: User, wishes: Wishes):
-        self.wishes = wishes
-        self.user = user
+    _user: User
+    _wishes: Wishes
+    _id: str
