@@ -14,6 +14,6 @@ class Game:
     def __init__(self, replay_id: ReplayId, tickets: Tuple[Ticket, Ticket]):
         time = tickets[0].wishes.time
 
-        self.record = Replay(replay_id, tickets)
+        self.replay = Replay(replay_id, tickets)
         self.timeLeft = (time, time)
         self.gameState = GameState()

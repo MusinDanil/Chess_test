@@ -26,8 +26,8 @@ class Storage:
     def get_user(self, user_id):
         return self.users[user_id]
 
-    def edit_user(self, user_id, delta): # todo annotated
+    def edit_user(self, user_id, delta):  # todo annotated
         return self.users[user_id]
-    
+
     def delete_user(self, user_id):
         pass
