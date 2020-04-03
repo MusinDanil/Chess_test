@@ -11,6 +11,6 @@ class Wishes:
 
 
 class Ticket:
-    _user: User
-    _wishes: Wishes
-    _id: str
+    user: User
+    wishes: Wishes
+    id: str
