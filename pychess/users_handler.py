@@ -13,8 +13,8 @@ class UsersHandler:
     def __init__(self, storage: Storage):
         self.storage = storage
 
-    def register_user(self, user: User):
-        self.storage.add_user(user)
+    def register_user(self, registration_data):
+        pass
 
     def delete_user(self, user_id):
         self.storage.delete_user(user_id)
@@ -24,4 +24,3 @@ class UsersHandler:
     
     def get_user(self, user_id):
         self.storage.get_user(user_id)
-        
