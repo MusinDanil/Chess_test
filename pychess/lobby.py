@@ -30,18 +30,18 @@ class Lobby:
         return self._pending_tickets.values()
 
     def change_ticket(self, ticket: Ticket, new_ticket: Ticket):
-        if ticket._user.id in self._pending_tickets.keys():
-            self._pending_tickets[ticket._user.id] = new_ticket
+        if ticket._user.user_id in self._pending_tickets.keys():
+            self._pending_tickets[ticket._user.user_id] = new_ticket
             self._check_pairs()
 
     def add_ticket(self, ticket: Ticket):
-        if ticket._user.id in self._pending_tickets.keys():
-            self._pending_tickets[ticket._user.id] = ticket
+        if ticket._user.user_id in self._pending_tickets.keys():
+            self._pending_tickets[ticket._user.user_id] = ticket
             self._check_pairs()
 
     def remove_ticket(self, ticket: Ticket):
-        if ticket._user.id in self._pending_tickets.keys():
-            self._pending_tickets.pop(ticket._user.id)
+        if ticket._user.user_id in self._pending_tickets.keys():
+            self._pending_tickets.pop(ticket._user.user_id)
 
     def __init__(self, game_pool: GamePool):
         self._game_pool = game_pool
