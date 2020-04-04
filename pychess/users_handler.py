@@ -23,4 +23,5 @@ class UsersHandler:
         self.storage.edit_user(user_id, delta)
 
     def get_user(self, user_id):
-        self.storage.get_user(user_id)
+        user: User = User(self.storage.get_user(user_id))
+        return user
