@@ -13,4 +13,4 @@ class Replay:
     def __init__(self, replay_id: ReplayId, tickets: Tuple[Ticket, Ticket]):
         self.moves: List[Move] = []
         self.tickets = tickets
-        self.id = replay_id
+        self.replay_id = replay_id

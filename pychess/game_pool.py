@@ -9,17 +9,15 @@ from history import History
 
 class GamePool:
     current_games: Dict[GameId, Game]
-    __last_id: GameId
 
     def __init__(self, history: History):
         self.history = history
-        self.current_games = dict()
-        self.__last_id = 0
+        self.current_games: Dict[GameId, Game] = dict()
 
     def start_game(self, tickets: Tuple[Ticket, Ticket]):
-        new_game = Game(self.__last_id, tickets)
-        self.current_games[self.__last_id] = new_game
-        self.__last_id += 1
+        last_id = self.history.register_game()
+        new_game = Game(last_id, tickets)
+        self.current_games[last_id] = new_game
 
         return id
 
